@@ -1,0 +1,21 @@
+package com.firstspring;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController //It combines two annotations  --> Controller and Response Body
+public class HelloController {
+	
+	@GetMapping("/hello")
+	public HelloResponse hello() {
+		return new HelloResponse("Hello");
+	}
+	
+	@PostMapping("/hello")
+	public String hellopost(@RequestBody String name) {
+		return "Hello " + name + "!";
+	}
+	
+}

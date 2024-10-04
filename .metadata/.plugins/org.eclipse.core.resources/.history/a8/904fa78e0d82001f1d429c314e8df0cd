@@ -1,0 +1,6 @@
+package com.firstspring;
+
+@RestController
+public class HelloController {
+
+}
